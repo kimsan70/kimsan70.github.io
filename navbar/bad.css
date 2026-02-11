@@ -1,0 +1,30 @@
+/* google fonts need to be put here starting with '@import' */
+
+
+
+/*
+css reset - this sets ALL elements to have zero padding and margin, 
+and to display in the more logical border-box style
+*/
+
+body {
+  font-family: serif;
+  margin: 20px;
+}
+
+nav ul {
+  list-style: disc;
+  padding-left: 40px;
+  margin-top: 20px;
+}
+
+nav a {
+  display: inline;
+  text-decoration: underline;
+  color: blue;
+  background: none;
+  padding: 0;
+  border: none;
+  transition: none;
+}
+
