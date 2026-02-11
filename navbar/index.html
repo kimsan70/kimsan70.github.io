@@ -1,1 +1,53 @@
+<!doctype html>
+<html lang="en-US">
 
+<head>
+  <title>WRA 410 Assignment 01 - Good and Bad Navigation</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    const linkElement = document.createElement('link');
+    linkElement.rel = 'stylesheet';
+    linkElement.type = 'text/css';
+    linkElement.href = (Math.random() > .5 ? 'css/good.css' : 'css/bad.css');
+    document.head.appendChild(linkElement);
+  </script>
+
+</head>
+
+
+
+<body>
+
+  <header class="site-header">
+    <h1>WRA 410 Assignment 01</h1>
+
+    <nav>
+      <ul>
+        <li><a href="#" class="current">Home</a></li>
+        <li><a href="#">Assignments</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault(); // prevents jumping to top
+      
+      navLinks.forEach(l => l.classList.remove("current"));
+      this.classList.add("current");
+    });
+  });
+  </script>
+
+</body>
+
+
+</html>
